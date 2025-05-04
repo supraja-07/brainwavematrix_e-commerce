@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+  }
+  
+  header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .left-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .left-controls input,
+  .left-controls select {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  #login-btn {
+    background: #007bff;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 2rem;
+  }
+  
+  .product {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .product img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: contain;
+  }
+  
+  .product h3 {
+    margin: 10px 0;
+  }
+  
+  .product button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .cart {
+    background: #fff;
+    padding: 1rem;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 300px;
+    height: calc(100% - 60px);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+  }
+  
+  .cart h2 {
+    text-align: center;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .total {
+    font-weight: bold;
+    padding: 1rem;
+  }
+  
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 300px;
+  }
+  
+  .modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  .modal-content button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .products {
+      grid-template-columns: 1fr;
+    }
+  
+    .cart {
+      width: 100%;
+      top: auto;
+      bottom: 0;
+      height: 250px;
+    }
+  
+    .left-controls {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  

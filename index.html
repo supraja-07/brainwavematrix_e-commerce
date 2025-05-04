@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced E-Commerce</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="left-controls">
+      <input type="text" id="search" placeholder="Search products...">
+      <select id="category-filter">
+        <option value="all">All Categories</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Accessories">Accessories</option>
+      </select>
+    </div>
+    <div>
+      <button id="login-btn">Login</button>
+      🛒 Cart (<span id="cart-count">0</span>)
+    </div>
+  </header>
+
+  <section class="products" id="product-list"></section>
+
+  <aside class="cart" id="cart">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <div class="total">Total: $<span id="total-price">0</span></div>
+  </aside>
+
+  
+  <div class="modal" id="login-modal">
+    <div class="modal-content">
+      <h2>Login</h2>
+      <input type="text" placeholder="Username">
+      <input type="password" placeholder="Password">
+      <button onclick="closeModal()">Login</button>
+      <p style="text-align:center; margin-top:10px;">
+        <a href="#" onclick="switchToSignup()">Don't have an account?</a>
+      </p>
+    </div>
+  </div>
+
+  
+  <div class="modal" id="signup-modal">
+    <div class="modal-content">
+      <h2>Signup</h2>
+      <input type="text" placeholder="Username">
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Password">
+      <button onclick="closeModal()">Signup</button>
+      <p style="text-align:center; margin-top:10px;">
+        <a href="#" onclick="switchToLogin()">Already have an account?</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
